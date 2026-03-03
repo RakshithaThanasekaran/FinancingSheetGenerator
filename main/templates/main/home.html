@@ -1,0 +1,51 @@
+{% extends "main/base.html" %}
+
+{% block title %}Finance Sheet Generator{% endblock %}
+
+{% block sidebar %}
+<div class="card p-3">
+    <h5>Input Options</h5>
+    <form>
+        <div class="mb-3">
+            <label for="income" class="form-label">Monthly Income</label>
+            <input type="number" class="form-control" id="income" placeholder="Enter income">
+        </div>
+        <div class="mb-3">
+            <label for="expenses" class="form-label">Monthly Expenses</label>
+            <input type="number" class="form-control" id="expenses" placeholder="Enter expenses">
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Generate Sheet</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="card p-3">
+    <h5>Generated Sheet</h5>
+    <p>Results will appear here after submitting the form.</p>
+
+    <!-- Placeholder table -->
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Income</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>Expenses</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>Balance</td>
+                <td>$0</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
